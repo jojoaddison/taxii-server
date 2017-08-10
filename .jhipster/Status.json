@@ -1,0 +1,54 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "url",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "requestUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "requestTimestamp",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "totalObjects",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "successCount",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "successes",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "failureCount",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "failures",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "pendingCount",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "pendings",
+            "fieldType": "String"
+        }
+    ],
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "status",
+    "pagination": "no"
+}
