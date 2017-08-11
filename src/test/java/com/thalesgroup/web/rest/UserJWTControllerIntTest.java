@@ -1,10 +1,5 @@
 package com.thalesgroup.web.rest;
 
-import com.thalesgroup.JTaxiiServerApp;
-import com.thalesgroup.domain.User;
-import com.thalesgroup.repository.UserRepository;
-import com.thalesgroup.security.jwt.TokenProvider;
-import com.thalesgroup.web.rest.vm.LoginVM;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,6 +10,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import com.thalesgroup.taxiiserver.JTaxiiServerApp;
+import com.thalesgroup.taxiiserver.domain.User;
+import com.thalesgroup.taxiiserver.repository.UserRepository;
+import com.thalesgroup.taxiiserver.security.jwt.TokenProvider;
+import com.thalesgroup.taxiiserver.web.rest.UserJWTController;
+import com.thalesgroup.taxiiserver.web.rest.vm.LoginVM;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;

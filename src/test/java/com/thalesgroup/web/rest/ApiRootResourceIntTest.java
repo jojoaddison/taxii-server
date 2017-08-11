@@ -31,12 +31,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.thalesgroup.JTaxiiServerApp;
-import com.thalesgroup.domain.ApiRoot;
-import com.thalesgroup.domain.Channel;
-import com.thalesgroup.domain.Collection;
-import com.thalesgroup.repository.ApiRootRepository;
-import com.thalesgroup.web.rest.errors.ExceptionTranslator;
+import com.thalesgroup.taxiiserver.JTaxiiServerApp;
+import com.thalesgroup.taxiiserver.domain.ApiRoot;
+import com.thalesgroup.taxiiserver.domain.Channel;
+import com.thalesgroup.taxiiserver.domain.Collection;
+import com.thalesgroup.taxiiserver.repository.ApiRootRepository;
+import com.thalesgroup.taxiiserver.web.rest.ApiRootResource;
+import com.thalesgroup.taxiiserver.web.rest.errors.ExceptionTranslator;
 
 /**
  * Test class for the ApiRootResource REST controller.
@@ -198,8 +199,8 @@ public class ApiRootResourceIntTest {
             .andExpect(jsonPath("$.[*].channels").value(hasItem(DEFAULT_CHANNELS.toString())))
             .andExpect(jsonPath("$.[*].collections").value(hasItem(DEFAULT_COLLECTIONS.toString())))
             .andExpect(jsonPath("$.[*].maxContentLength").value(hasItem(DEFAULT_MAX_CONTENT_LENGTH.intValue())))
-            .andExpect(jsonPath("$.[*].createdDate").value(hasItem(sameInstant(DEFAULT_CREATED_DATE))))
-            .andExpect(jsonPath("$.[*].lastModifiedDate").value(hasItem(sameInstant(DEFAULT_LAST_MODIFIED_DATE))));
+            .andExpect(jsonPath("$.[*].createdDate").value(hasItem((DEFAULT_CREATED_DATE))))
+            .andExpect(jsonPath("$.[*].lastModifiedDate").value(hasItem((DEFAULT_LAST_MODIFIED_DATE))));
     }
 
     @Test
@@ -218,8 +219,8 @@ public class ApiRootResourceIntTest {
             .andExpect(jsonPath("$.channels").value(DEFAULT_CHANNELS.toString()))
             .andExpect(jsonPath("$.collections").value(DEFAULT_COLLECTIONS.toString()))
             .andExpect(jsonPath("$.maxContentLength").value(DEFAULT_MAX_CONTENT_LENGTH.intValue()))
-            .andExpect(jsonPath("$.createdDate").value(sameInstant(DEFAULT_CREATED_DATE)))
-            .andExpect(jsonPath("$.lastModifiedDate").value(sameInstant(DEFAULT_LAST_MODIFIED_DATE)));
+            .andExpect(jsonPath("$.createdDate").value((DEFAULT_CREATED_DATE)))
+            .andExpect(jsonPath("$.lastModifiedDate").value((DEFAULT_LAST_MODIFIED_DATE)));
     }
 
     @Test

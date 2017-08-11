@@ -5,6 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.bind.annotation.*;
 
+import com.thalesgroup.taxiiserver.web.rest.errors.CustomParameterizedException;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.HashMap;

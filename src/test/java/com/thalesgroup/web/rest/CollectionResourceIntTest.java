@@ -1,11 +1,5 @@
 package com.thalesgroup.web.rest;
 
-import com.thalesgroup.JTaxiiServerApp;
-
-import com.thalesgroup.domain.Collection;
-import com.thalesgroup.repository.CollectionRepository;
-import com.thalesgroup.web.rest.errors.ExceptionTranslator;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,6 +12,12 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import com.thalesgroup.taxiiserver.JTaxiiServerApp;
+import com.thalesgroup.taxiiserver.domain.Collection;
+import com.thalesgroup.taxiiserver.repository.CollectionRepository;
+import com.thalesgroup.taxiiserver.web.rest.CollectionResource;
+import com.thalesgroup.taxiiserver.web.rest.errors.ExceptionTranslator;
 
 import java.util.List;
 

@@ -1,16 +1,18 @@
 package com.thalesgroup.service;
 
-import com.thalesgroup.JTaxiiServerApp;
-import com.thalesgroup.domain.User;
-import com.thalesgroup.config.Constants;
-import com.thalesgroup.repository.UserRepository;
-import com.thalesgroup.service.dto.UserDTO;
-import com.thalesgroup.service.util.RandomUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import com.thalesgroup.taxiiserver.JTaxiiServerApp;
+import com.thalesgroup.taxiiserver.config.Constants;
+import com.thalesgroup.taxiiserver.domain.User;
+import com.thalesgroup.taxiiserver.repository.UserRepository;
+import com.thalesgroup.taxiiserver.service.UserService;
+import com.thalesgroup.taxiiserver.service.dto.UserDTO;
+import com.thalesgroup.taxiiserver.service.util.RandomUtil;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

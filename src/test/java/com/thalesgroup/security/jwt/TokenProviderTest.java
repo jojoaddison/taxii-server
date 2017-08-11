@@ -1,6 +1,5 @@
 package com.thalesgroup.security.jwt;
 
-import com.thalesgroup.security.AuthoritiesConstants;
 import io.github.jhipster.config.JHipsterProperties;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -12,6 +11,9 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.test.util.ReflectionTestUtils;
+
+import com.thalesgroup.taxiiserver.security.AuthoritiesConstants;
+import com.thalesgroup.taxiiserver.security.jwt.TokenProvider;
 
 import java.util.ArrayList;
 import java.util.Collection;

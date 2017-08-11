@@ -29,12 +29,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.thalesgroup.JTaxiiServerApp;
-import com.thalesgroup.domain.Status;
-import com.thalesgroup.domain.types.StatusFailure;
-import com.thalesgroup.domain.types.StatusSuccess;
-import com.thalesgroup.repository.StatusRepository;
-import com.thalesgroup.web.rest.errors.ExceptionTranslator;
+import com.thalesgroup.taxiiserver.JTaxiiServerApp;
+import com.thalesgroup.taxiiserver.domain.Status;
+import com.thalesgroup.taxiiserver.domain.types.StatusFailure;
+import com.thalesgroup.taxiiserver.domain.types.StatusSuccess;
+import com.thalesgroup.taxiiserver.repository.StatusRepository;
+import com.thalesgroup.taxiiserver.web.rest.StatusResource;
+import com.thalesgroup.taxiiserver.web.rest.errors.ExceptionTranslator;
 
 /**
  * Test class for the StatusResource REST controller.

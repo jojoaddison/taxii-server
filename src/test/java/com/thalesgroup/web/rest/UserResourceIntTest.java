@@ -1,16 +1,5 @@
 package com.thalesgroup.web.rest;
 
-import com.thalesgroup.JTaxiiServerApp;
-import com.thalesgroup.domain.Authority;
-import com.thalesgroup.domain.User;
-import com.thalesgroup.repository.UserRepository;
-import com.thalesgroup.security.AuthoritiesConstants;
-import com.thalesgroup.service.MailService;
-import com.thalesgroup.service.UserService;
-import com.thalesgroup.service.dto.UserDTO;
-import com.thalesgroup.service.mapper.UserMapper;
-import com.thalesgroup.web.rest.errors.ExceptionTranslator;
-import com.thalesgroup.web.rest.vm.ManagedUserVM;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,6 +13,19 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import com.thalesgroup.taxiiserver.JTaxiiServerApp;
+import com.thalesgroup.taxiiserver.domain.Authority;
+import com.thalesgroup.taxiiserver.domain.User;
+import com.thalesgroup.taxiiserver.repository.UserRepository;
+import com.thalesgroup.taxiiserver.security.AuthoritiesConstants;
+import com.thalesgroup.taxiiserver.service.MailService;
+import com.thalesgroup.taxiiserver.service.UserService;
+import com.thalesgroup.taxiiserver.service.dto.UserDTO;
+import com.thalesgroup.taxiiserver.service.mapper.UserMapper;
+import com.thalesgroup.taxiiserver.web.rest.UserResource;
+import com.thalesgroup.taxiiserver.web.rest.errors.ExceptionTranslator;
+import com.thalesgroup.taxiiserver.web.rest.vm.ManagedUserVM;
 
 import java.time.Instant;
 import java.util.Arrays;

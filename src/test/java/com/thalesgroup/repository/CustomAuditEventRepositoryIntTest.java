@@ -1,9 +1,5 @@
 package com.thalesgroup.repository;
 
-import com.thalesgroup.JTaxiiServerApp;
-import com.thalesgroup.config.Constants;
-import com.thalesgroup.config.audit.AuditEventConverter;
-import com.thalesgroup.domain.PersistentAuditEvent;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,6 +10,13 @@ import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.mock.web.MockHttpSession;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import com.thalesgroup.taxiiserver.JTaxiiServerApp;
+import com.thalesgroup.taxiiserver.config.Constants;
+import com.thalesgroup.taxiiserver.config.audit.AuditEventConverter;
+import com.thalesgroup.taxiiserver.domain.PersistentAuditEvent;
+import com.thalesgroup.taxiiserver.repository.CustomAuditEventRepository;
+import com.thalesgroup.taxiiserver.repository.PersistenceAuditEventRepository;
 
 import javax.servlet.http.HttpSession;
 import java.time.Instant;

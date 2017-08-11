@@ -1,16 +1,5 @@
 package com.thalesgroup.web.rest;
 
-import com.thalesgroup.JTaxiiServerApp;
-import com.thalesgroup.domain.Authority;
-import com.thalesgroup.domain.User;
-import com.thalesgroup.repository.AuthorityRepository;
-import com.thalesgroup.repository.UserRepository;
-import com.thalesgroup.security.AuthoritiesConstants;
-import com.thalesgroup.service.MailService;
-import com.thalesgroup.service.UserService;
-import com.thalesgroup.service.dto.UserDTO;
-import com.thalesgroup.web.rest.vm.KeyAndPasswordVM;
-import com.thalesgroup.web.rest.vm.ManagedUserVM;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,6 +15,19 @@ import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import com.thalesgroup.taxiiserver.JTaxiiServerApp;
+import com.thalesgroup.taxiiserver.domain.Authority;
+import com.thalesgroup.taxiiserver.domain.User;
+import com.thalesgroup.taxiiserver.repository.AuthorityRepository;
+import com.thalesgroup.taxiiserver.repository.UserRepository;
+import com.thalesgroup.taxiiserver.security.AuthoritiesConstants;
+import com.thalesgroup.taxiiserver.service.MailService;
+import com.thalesgroup.taxiiserver.service.UserService;
+import com.thalesgroup.taxiiserver.service.dto.UserDTO;
+import com.thalesgroup.taxiiserver.web.rest.AccountResource;
+import com.thalesgroup.taxiiserver.web.rest.vm.KeyAndPasswordVM;
+import com.thalesgroup.taxiiserver.web.rest.vm.ManagedUserVM;
 
 import java.time.Instant;
 import java.time.LocalDate;

@@ -1,10 +1,5 @@
 package com.thalesgroup.web.rest;
 
-import com.thalesgroup.JTaxiiServerApp;
-import com.thalesgroup.config.audit.AuditEventConverter;
-import com.thalesgroup.domain.PersistentAuditEvent;
-import com.thalesgroup.repository.PersistenceAuditEventRepository;
-import com.thalesgroup.service.AuditEventService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,6 +13,13 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import com.thalesgroup.taxiiserver.JTaxiiServerApp;
+import com.thalesgroup.taxiiserver.config.audit.AuditEventConverter;
+import com.thalesgroup.taxiiserver.domain.PersistentAuditEvent;
+import com.thalesgroup.taxiiserver.repository.PersistenceAuditEventRepository;
+import com.thalesgroup.taxiiserver.service.AuditEventService;
+import com.thalesgroup.taxiiserver.web.rest.AuditResource;
 
 import java.time.Instant;
 import java.time.format.DateTimeFormatter;
