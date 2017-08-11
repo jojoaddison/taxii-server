@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:com.thalesgroup.taxiiserver.JTaxiiServerApp</config>
+		<config>java:io.cisa.taxiiserver.JTaxiiServerApp</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

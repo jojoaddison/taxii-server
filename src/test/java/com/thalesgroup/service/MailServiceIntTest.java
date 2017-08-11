@@ -1,5 +1,8 @@
 package com.thalesgroup.service;
 
+import io.cisa.taxiiserver.JTaxiiServerApp;
+import io.cisa.taxiiserver.domain.User;
+import io.cisa.taxiiserver.service.MailService;
 import io.github.jhipster.config.JHipsterProperties;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,10 +18,6 @@ import org.springframework.mail.MailSendException;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.thymeleaf.spring4.SpringTemplateEngine;
-
-import com.thalesgroup.taxiiserver.JTaxiiServerApp;
-import com.thalesgroup.taxiiserver.domain.User;
-import com.thalesgroup.taxiiserver.service.MailService;
 
 import javax.mail.Multipart;
 import javax.mail.internet.MimeBodyPart;

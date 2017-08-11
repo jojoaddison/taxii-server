@@ -13,7 +13,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpHeaders;
 
-import com.thalesgroup.taxiiserver.web.rest.util.PaginationUtil;
+import io.cisa.taxiiserver.web.rest.util.PaginationUtil;
 
 /**
  * Tests based on parsing algorithm in app/components/util/pagination-util.service.js

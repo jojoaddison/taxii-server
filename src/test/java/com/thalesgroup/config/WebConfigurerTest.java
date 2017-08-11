@@ -3,8 +3,8 @@ package com.thalesgroup.config;
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.servlet.InstrumentedFilter;
 import com.codahale.metrics.servlets.MetricsServlet;
-import com.thalesgroup.taxiiserver.config.WebConfigurer;
 
+import io.cisa.taxiiserver.config.WebConfigurer;
 import io.github.jhipster.config.JHipsterConstants;
 import io.github.jhipster.config.JHipsterProperties;
 import io.undertow.Undertow;

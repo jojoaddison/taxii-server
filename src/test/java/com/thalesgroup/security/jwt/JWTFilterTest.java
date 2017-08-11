@@ -1,5 +1,9 @@
 package com.thalesgroup.security.jwt;
 
+import io.cisa.taxiiserver.security.AuthoritiesConstants;
+import io.cisa.taxiiserver.security.jwt.JWTConfigurer;
+import io.cisa.taxiiserver.security.jwt.JWTFilter;
+import io.cisa.taxiiserver.security.jwt.TokenProvider;
 import io.github.jhipster.config.JHipsterProperties;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,11 +15,6 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.test.util.ReflectionTestUtils;
-
-import com.thalesgroup.taxiiserver.security.AuthoritiesConstants;
-import com.thalesgroup.taxiiserver.security.jwt.JWTConfigurer;
-import com.thalesgroup.taxiiserver.security.jwt.JWTFilter;
-import com.thalesgroup.taxiiserver.security.jwt.TokenProvider;
 
 import java.util.Collections;
 

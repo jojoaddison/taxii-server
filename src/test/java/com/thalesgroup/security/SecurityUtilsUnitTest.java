@@ -7,8 +7,8 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import com.thalesgroup.taxiiserver.security.AuthoritiesConstants;
-import com.thalesgroup.taxiiserver.security.SecurityUtils;
+import io.cisa.taxiiserver.security.AuthoritiesConstants;
+import io.cisa.taxiiserver.security.SecurityUtils;
 
 import java.util.ArrayList;
 import java.util.Collection;

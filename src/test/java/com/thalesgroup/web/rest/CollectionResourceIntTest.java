@@ -13,11 +13,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.thalesgroup.taxiiserver.JTaxiiServerApp;
-import com.thalesgroup.taxiiserver.domain.Collection;
-import com.thalesgroup.taxiiserver.repository.CollectionRepository;
-import com.thalesgroup.taxiiserver.web.rest.CollectionResource;
-import com.thalesgroup.taxiiserver.web.rest.errors.ExceptionTranslator;
+import io.cisa.taxiiserver.JTaxiiServerApp;
+import io.cisa.taxiiserver.domain.Collection;
+import io.cisa.taxiiserver.repository.CollectionRepository;
+import io.cisa.taxiiserver.web.rest.CollectionResource;
+import io.cisa.taxiiserver.web.rest.errors.ExceptionTranslator;
 
 import java.util.List;
 

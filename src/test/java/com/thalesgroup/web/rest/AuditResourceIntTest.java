@@ -14,12 +14,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.thalesgroup.taxiiserver.JTaxiiServerApp;
-import com.thalesgroup.taxiiserver.config.audit.AuditEventConverter;
-import com.thalesgroup.taxiiserver.domain.PersistentAuditEvent;
-import com.thalesgroup.taxiiserver.repository.PersistenceAuditEventRepository;
-import com.thalesgroup.taxiiserver.service.AuditEventService;
-import com.thalesgroup.taxiiserver.web.rest.AuditResource;
+import io.cisa.taxiiserver.JTaxiiServerApp;
+import io.cisa.taxiiserver.config.audit.AuditEventConverter;
+import io.cisa.taxiiserver.domain.PersistentAuditEvent;
+import io.cisa.taxiiserver.repository.PersistenceAuditEventRepository;
+import io.cisa.taxiiserver.service.AuditEventService;
+import io.cisa.taxiiserver.web.rest.AuditResource;
 
 import java.time.Instant;
 import java.time.format.DateTimeFormatter;

@@ -11,12 +11,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.thalesgroup.taxiiserver.JTaxiiServerApp;
-import com.thalesgroup.taxiiserver.domain.User;
-import com.thalesgroup.taxiiserver.repository.UserRepository;
-import com.thalesgroup.taxiiserver.security.jwt.TokenProvider;
-import com.thalesgroup.taxiiserver.web.rest.UserJWTController;
-import com.thalesgroup.taxiiserver.web.rest.vm.LoginVM;
+import io.cisa.taxiiserver.JTaxiiServerApp;
+import io.cisa.taxiiserver.domain.User;
+import io.cisa.taxiiserver.repository.UserRepository;
+import io.cisa.taxiiserver.security.jwt.TokenProvider;
+import io.cisa.taxiiserver.web.rest.UserJWTController;
+import io.cisa.taxiiserver.web.rest.vm.LoginVM;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;

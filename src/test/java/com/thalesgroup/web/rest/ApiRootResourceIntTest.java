@@ -31,13 +31,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.thalesgroup.taxiiserver.JTaxiiServerApp;
-import com.thalesgroup.taxiiserver.domain.ApiRoot;
-import com.thalesgroup.taxiiserver.domain.Channel;
-import com.thalesgroup.taxiiserver.domain.Collection;
-import com.thalesgroup.taxiiserver.repository.ApiRootRepository;
-import com.thalesgroup.taxiiserver.web.rest.ApiRootResource;
-import com.thalesgroup.taxiiserver.web.rest.errors.ExceptionTranslator;
+import io.cisa.taxiiserver.JTaxiiServerApp;
+import io.cisa.taxiiserver.domain.ApiRoot;
+import io.cisa.taxiiserver.domain.Channel;
+import io.cisa.taxiiserver.domain.Collection;
+import io.cisa.taxiiserver.repository.ApiRootRepository;
+import io.cisa.taxiiserver.web.rest.ApiRootResource;
+import io.cisa.taxiiserver.web.rest.errors.ExceptionTranslator;
 
 /**
  * Test class for the ApiRootResource REST controller.

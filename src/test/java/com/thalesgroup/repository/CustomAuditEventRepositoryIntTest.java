@@ -11,12 +11,12 @@ import org.springframework.mock.web.MockHttpSession;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.thalesgroup.taxiiserver.JTaxiiServerApp;
-import com.thalesgroup.taxiiserver.config.Constants;
-import com.thalesgroup.taxiiserver.config.audit.AuditEventConverter;
-import com.thalesgroup.taxiiserver.domain.PersistentAuditEvent;
-import com.thalesgroup.taxiiserver.repository.CustomAuditEventRepository;
-import com.thalesgroup.taxiiserver.repository.PersistenceAuditEventRepository;
+import io.cisa.taxiiserver.JTaxiiServerApp;
+import io.cisa.taxiiserver.config.Constants;
+import io.cisa.taxiiserver.config.audit.AuditEventConverter;
+import io.cisa.taxiiserver.domain.PersistentAuditEvent;
+import io.cisa.taxiiserver.repository.CustomAuditEventRepository;
+import io.cisa.taxiiserver.repository.PersistenceAuditEventRepository;
 
 import javax.servlet.http.HttpSession;
 import java.time.Instant;

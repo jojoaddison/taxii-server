@@ -10,9 +10,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.thalesgroup.taxiiserver.JTaxiiServerApp;
-import com.thalesgroup.taxiiserver.web.rest.errors.ErrorConstants;
-import com.thalesgroup.taxiiserver.web.rest.errors.ExceptionTranslator;
+import io.cisa.taxiiserver.JTaxiiServerApp;
+import io.cisa.taxiiserver.web.rest.errors.ErrorConstants;
+import io.cisa.taxiiserver.web.rest.errors.ExceptionTranslator;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
