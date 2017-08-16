@@ -1,9 +1,9 @@
 package io.cisa.taxiiserver.config;
 
-import com.fasterxml.jackson.module.afterburner.AfterburnerModule;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import com.fasterxml.jackson.module.afterburner.AfterburnerModule;
 
 @Configuration
 public class JacksonConfiguration {

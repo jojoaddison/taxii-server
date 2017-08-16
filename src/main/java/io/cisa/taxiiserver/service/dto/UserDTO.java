@@ -1,16 +1,18 @@
 package io.cisa.taxiiserver.service.dto;
 
+import java.time.Instant;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
 import io.cisa.taxiiserver.config.Constants;
 import io.cisa.taxiiserver.domain.Authority;
 import io.cisa.taxiiserver.domain.User;
-
-import javax.validation.constraints.*;
-import java.time.Instant;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 /**
  * A DTO representing a user, with his authorities.

@@ -1,5 +1,13 @@
 package io.cisa.taxiiserver.service;
 
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
@@ -17,11 +25,6 @@ import io.cisa.taxiiserver.security.AuthoritiesConstants;
 import io.cisa.taxiiserver.security.SecurityUtils;
 import io.cisa.taxiiserver.service.dto.UserDTO;
 import io.cisa.taxiiserver.service.util.RandomUtil;
-
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
-import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Service class for managing users.

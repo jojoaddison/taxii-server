@@ -1,5 +1,9 @@
 package io.cisa.taxiiserver.web.rest;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,12 +19,7 @@ import io.cisa.taxiiserver.JTaxiiServerApp;
 import io.cisa.taxiiserver.domain.User;
 import io.cisa.taxiiserver.repository.UserRepository;
 import io.cisa.taxiiserver.security.jwt.TokenProvider;
-import io.cisa.taxiiserver.web.rest.UserJWTController;
 import io.cisa.taxiiserver.web.rest.vm.LoginVM;
-
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /**
  * Test class for the UserJWTController REST controller.

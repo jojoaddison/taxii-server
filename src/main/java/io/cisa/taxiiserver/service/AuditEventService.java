@@ -1,5 +1,8 @@
 package io.cisa.taxiiserver.service;
 
+import java.time.Instant;
+import java.util.Optional;
+
 import org.springframework.boot.actuate.audit.AuditEvent;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -7,9 +10,6 @@ import org.springframework.stereotype.Service;
 
 import io.cisa.taxiiserver.config.audit.AuditEventConverter;
 import io.cisa.taxiiserver.repository.PersistenceAuditEventRepository;
-
-import java.time.Instant;
-import java.util.Optional;
 
 /**
  * Service for managing audit events.

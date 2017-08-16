@@ -1,5 +1,10 @@
 package io.cisa.taxiiserver.security;
 
+import java.util.List;
+import java.util.Locale;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.core.GrantedAuthority;
@@ -11,9 +16,6 @@ import org.springframework.stereotype.Component;
 
 import io.cisa.taxiiserver.domain.User;
 import io.cisa.taxiiserver.repository.UserRepository;
-
-import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Authenticate a user from the database.

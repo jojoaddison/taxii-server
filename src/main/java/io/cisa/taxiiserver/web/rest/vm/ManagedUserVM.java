@@ -1,11 +1,11 @@
 package io.cisa.taxiiserver.web.rest.vm;
 
+import java.time.Instant;
+import java.util.Set;
+
 import javax.validation.constraints.Size;
 
 import io.cisa.taxiiserver.service.dto.UserDTO;
-
-import java.time.Instant;
-import java.util.Set;
 
 /**
  * View Model extending the UserDTO, which is meant to be used in the user management UI.

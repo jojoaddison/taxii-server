@@ -1,13 +1,13 @@
 package io.cisa.taxiiserver.repository;
 
+import java.time.Instant;
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import io.cisa.taxiiserver.domain.PersistentAuditEvent;
-
-import java.time.Instant;
-import java.util.List;
 
 /**
  * Spring Data MongoDB repository for the PersistentAuditEvent entity.

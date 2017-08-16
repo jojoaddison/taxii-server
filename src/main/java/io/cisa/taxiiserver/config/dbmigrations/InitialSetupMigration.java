@@ -1,17 +1,22 @@
 package io.cisa.taxiiserver.config.dbmigrations;
 
-import com.github.mongobee.changeset.ChangeLog;
-import com.github.mongobee.changeset.ChangeSet;
-
-import io.cisa.taxiiserver.domain.Authority;
-import io.cisa.taxiiserver.domain.User;
-import io.cisa.taxiiserver.security.AuthoritiesConstants;
+import java.time.Instant;
+import java.time.ZonedDateTime;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.springframework.data.mongodb.core.MongoTemplate;
 
-import java.time.Instant;
-import java.util.Arrays;
-import java.util.Collections;
+import com.github.mongobee.changeset.ChangeLog;
+import com.github.mongobee.changeset.ChangeSet;
+
+import io.cisa.taxiiserver.config.Constants;
+import io.cisa.taxiiserver.domain.ApiRoot;
+import io.cisa.taxiiserver.domain.Authority;
+import io.cisa.taxiiserver.domain.Collection;
+import io.cisa.taxiiserver.domain.Discovery;
+import io.cisa.taxiiserver.domain.User;
+import io.cisa.taxiiserver.security.AuthoritiesConstants;
 
 /**
  * Creates the initial database setup
@@ -93,5 +98,67 @@ public class InitialSetupMigration {
         userUser.getAuthorities().add(userAuthority);
         mongoTemplate.save(userUser);
     }
+    
+    @ChangeSet(order = "03", author = "initiator", id = "03-addApiRoot")
+    public void addApiRoot(MongoTemplate mongoTemplate) {
+    	ApiRoot apiRoot = new ApiRoot();
+    	apiRoot.setDisplayName("cisa");
+    	apiRoot.setDescription("CISA TAXII Service v0.01. A Cyber Incidence Situation Awareness research working group setup.");
+    	Set<String> versions = new HashSet<>();
+    	versions.add("taxii-2.0");
+    	apiRoot.versions(versions);
+    	apiRoot.setLastModifiedDate(ZonedDateTime.now());
+    	apiRoot.setMaxContentLength(50000000);
 
+    	Set<String> mediaTypes = new HashSet<>();
+    	mediaTypes.add(Constants.ACCEPT_STIX_HEADER);
+    	
+    	Collection sensor = new Collection();
+    	sensor.setCanRead(true);
+    	sensor.setCanWrite(true);
+    	sensor.setDescription("CISA Automated Sensor Collection");
+    	sensor.setDisplayName("CISA Sensor Collector");
+    	sensor.setUrl("/cisa/collections/sensor");    	
+    	
+    	
+    	sensor.setMediaTypes(mediaTypes);
+    	
+    	Collection operation = new Collection();
+    	operation.setCanRead(true);
+    	operation.setCanWrite(true);
+    	operation.setDescription("CISA Automated Sensor Collection");
+    	operation.setDisplayName("CISA Operation Collector");
+    	operation.setUrl("/cisa/collections/operation");
+    	operation.setMediaTypes(mediaTypes);
+    	
+    	
+    	Set<Collection> collections = new HashSet<>();
+    	collections.add(sensor);
+    	collections.add(operation);
+    	apiRoot.setCollections(collections);
+    	
+    	mongoTemplate.save(collections);
+    	
+    }
+
+
+    @ChangeSet(order = "04", author = "initiator", id = "04-addDiscovery")
+    public void addDiscovery(MongoTemplate mongoTemplate) {
+    	Discovery discovery = new Discovery();
+    	discovery.setDisplayName("CISA TAXII Server");
+    	discovery.setDescription("CISA TAXII Server for sensor and operation data");
+    	discovery.setDefaultURL("cisa");
+    	discovery.setContact("CISA Research working group.");
+    	Set<String> apiRoots = new HashSet<>();
+    	apiRoots.add("/cisa");
+    	apiRoots.add("/taxii");
+    	discovery.setApiRoots(apiRoots);
+    	mongoTemplate.save(discovery);
+    	
+    	apiRoots.clear();
+    	apiRoots.add("/taxii");
+    	discovery.setApiRoots(apiRoots);
+    	discovery.setDefaultURL("taxii");
+    	mongoTemplate.save(discovery);    	
+    }
 }

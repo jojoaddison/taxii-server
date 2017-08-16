@@ -39,7 +39,7 @@ public class ApiRoot implements Serializable {
     private Set<Collection> collections = new HashSet<>();
 
     @Field("max_content_length")
-    private Long maxContentLength;
+    private int maxContentLength;
 
     @Field("created_date")
     private ZonedDateTime createdDate;
@@ -120,16 +120,16 @@ public class ApiRoot implements Serializable {
         this.collections = collections;
     }
 
-    public Long getMaxContentLength() {
+    public int getMaxContentLength() {
         return maxContentLength;
     }
 
-    public ApiRoot maxContentLength(Long maxContentLength) {
+    public ApiRoot maxContentLength(int maxContentLength) {
         this.maxContentLength = maxContentLength;
         return this;
     }
 
-    public void setMaxContentLength(Long maxContentLength) {
+    public void setMaxContentLength(int maxContentLength) {
         this.maxContentLength = maxContentLength;
     }
 

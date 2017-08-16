@@ -35,7 +35,7 @@ public class Collection implements Serializable {
     private Boolean canWrite;
 
     @Field("media_types")
-    private String mediaTypes;
+    private Set<String> mediaTypes = new HashSet<>();
 
     @Field("objects_count")
     private Integer objectsCount;
@@ -119,16 +119,16 @@ public class Collection implements Serializable {
         this.canWrite = canWrite;
     }
 
-    public String getMediaTypes() {
+    public Set<String> getMediaTypes() {
         return mediaTypes;
     }
 
-    public Collection mediaTypes(String mediaTypes) {
+    public Collection mediaTypes(Set<String> mediaTypes) {
         this.mediaTypes = mediaTypes;
         return this;
     }
 
-    public void setMediaTypes(String mediaTypes) {
+    public void setMediaTypes(Set<String> mediaTypes) {
         this.mediaTypes = mediaTypes;
     }
 

@@ -34,7 +34,6 @@ import io.cisa.taxiiserver.domain.Status;
 import io.cisa.taxiiserver.domain.types.StatusFailure;
 import io.cisa.taxiiserver.domain.types.StatusSuccess;
 import io.cisa.taxiiserver.repository.StatusRepository;
-import io.cisa.taxiiserver.web.rest.StatusResource;
 import io.cisa.taxiiserver.web.rest.errors.ExceptionTranslator;
 
 /**

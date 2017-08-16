@@ -36,7 +36,6 @@ import io.cisa.taxiiserver.domain.ApiRoot;
 import io.cisa.taxiiserver.domain.Channel;
 import io.cisa.taxiiserver.domain.Collection;
 import io.cisa.taxiiserver.repository.ApiRootRepository;
-import io.cisa.taxiiserver.web.rest.ApiRootResource;
 import io.cisa.taxiiserver.web.rest.errors.ExceptionTranslator;
 
 /**

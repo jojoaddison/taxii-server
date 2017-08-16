@@ -1,8 +1,6 @@
 package io.cisa.taxiiserver.config;
 
-import io.cisa.taxiiserver.security.*;
-import io.cisa.taxiiserver.security.jwt.*;
-import io.github.jhipster.security.*;
+import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.BeanInitializationException;
 import org.springframework.context.annotation.Bean;
@@ -22,7 +20,10 @@ import org.springframework.security.data.repository.query.SecurityEvaluationCont
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.filter.CorsFilter;
 
-import javax.annotation.PostConstruct;
+import io.cisa.taxiiserver.security.AuthoritiesConstants;
+import io.cisa.taxiiserver.security.jwt.JWTConfigurer;
+import io.cisa.taxiiserver.security.jwt.TokenProvider;
+import io.github.jhipster.security.Http401UnauthorizedEntryPoint;
 
 @Configuration
 @EnableWebSecurity

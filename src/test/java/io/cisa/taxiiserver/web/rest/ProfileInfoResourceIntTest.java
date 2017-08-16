@@ -1,8 +1,9 @@
 package io.cisa.taxiiserver.web.rest;
 
-import io.cisa.taxiiserver.JTaxiiServerApp;
-import io.cisa.taxiiserver.web.rest.ProfileInfoResource;
-import io.github.jhipster.config.JHipsterProperties;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -16,10 +17,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import io.cisa.taxiiserver.JTaxiiServerApp;
+import io.github.jhipster.config.JHipsterProperties;
 
 /**
  * Test class for the ProfileInfoResource REST controller.

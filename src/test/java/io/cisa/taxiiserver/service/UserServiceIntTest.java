@@ -1,28 +1,26 @@
 package io.cisa.taxiiserver.service;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
+import java.util.List;
+import java.util.Optional;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import io.cisa.taxiiserver.JTaxiiServerApp;
 import io.cisa.taxiiserver.config.Constants;
 import io.cisa.taxiiserver.domain.User;
 import io.cisa.taxiiserver.repository.UserRepository;
-import io.cisa.taxiiserver.service.UserService;
 import io.cisa.taxiiserver.service.dto.UserDTO;
 import io.cisa.taxiiserver.service.util.RandomUtil;
-
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-
-import java.time.Instant;
-import java.time.temporal.ChronoUnit;
-import java.util.Optional;
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.*;
 
 /**
  * Test class for the UserResource REST controller.

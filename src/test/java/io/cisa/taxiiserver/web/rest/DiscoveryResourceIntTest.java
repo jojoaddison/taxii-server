@@ -35,7 +35,6 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import io.cisa.taxiiserver.JTaxiiServerApp;
 import io.cisa.taxiiserver.domain.Discovery;
 import io.cisa.taxiiserver.repository.DiscoveryRepository;
-import io.cisa.taxiiserver.web.rest.DiscoveryResource;
 import io.cisa.taxiiserver.web.rest.errors.ExceptionTranslator;
 
 /**

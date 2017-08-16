@@ -1,5 +1,15 @@
 package io.cisa.taxiiserver.repository;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.time.Instant;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpSession;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,17 +25,6 @@ import io.cisa.taxiiserver.JTaxiiServerApp;
 import io.cisa.taxiiserver.config.Constants;
 import io.cisa.taxiiserver.config.audit.AuditEventConverter;
 import io.cisa.taxiiserver.domain.PersistentAuditEvent;
-import io.cisa.taxiiserver.repository.CustomAuditEventRepository;
-import io.cisa.taxiiserver.repository.PersistenceAuditEventRepository;
-
-import javax.servlet.http.HttpSession;
-import java.time.Instant;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Test class for the CustomAuditEventRepository customAuditEventRepository class.

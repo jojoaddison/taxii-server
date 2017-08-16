@@ -1,5 +1,14 @@
 package io.cisa.taxiiserver.web.rest;
 
+import static org.hamcrest.Matchers.hasItem;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.time.Instant;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,14 +28,6 @@ import io.cisa.taxiiserver.config.audit.AuditEventConverter;
 import io.cisa.taxiiserver.domain.PersistentAuditEvent;
 import io.cisa.taxiiserver.repository.PersistenceAuditEventRepository;
 import io.cisa.taxiiserver.service.AuditEventService;
-import io.cisa.taxiiserver.web.rest.AuditResource;
-
-import java.time.Instant;
-import java.time.format.DateTimeFormatter;
-
-import static org.hamcrest.Matchers.hasItem;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**
  * Test class for the AuditResource REST controller.

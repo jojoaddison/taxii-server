@@ -1,5 +1,8 @@
 package io.cisa.taxiiserver.repository;
 
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.boot.actuate.audit.AuditEvent;
 import org.springframework.boot.actuate.audit.AuditEventRepository;
 import org.springframework.stereotype.Repository;
@@ -9,9 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import io.cisa.taxiiserver.config.Constants;
 import io.cisa.taxiiserver.config.audit.AuditEventConverter;
 import io.cisa.taxiiserver.domain.PersistentAuditEvent;
-
-import java.util.Date;
-import java.util.List;
 
 /**
  * An implementation of Spring Boot's AuditEventRepository.

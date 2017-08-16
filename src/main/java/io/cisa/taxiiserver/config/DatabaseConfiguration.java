@@ -1,10 +1,8 @@
 package io.cisa.taxiiserver.config;
 
-import com.github.mongobee.Mongobee;
-import com.mongodb.MongoClient;
-import io.github.jhipster.config.JHipsterConstants;
-import io.github.jhipster.domain.util.JSR310DateConverters.DateToZonedDateTimeConverter;
-import io.github.jhipster.domain.util.JSR310DateConverters.ZonedDateTimeToDateConverter;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
@@ -21,12 +19,16 @@ import org.springframework.data.mongodb.core.mapping.event.ValidatingMongoEventL
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.github.mongobee.Mongobee;
+import com.mongodb.MongoClient;
+
+import io.github.jhipster.config.JHipsterConstants;
+import io.github.jhipster.domain.util.JSR310DateConverters.DateToZonedDateTimeConverter;
+import io.github.jhipster.domain.util.JSR310DateConverters.ZonedDateTimeToDateConverter;
 
 @Configuration
 @Profile("!" + JHipsterConstants.SPRING_PROFILE_CLOUD)
-@EnableMongoRepositories("com.thalesgroup.repository")
+@EnableMongoRepositories("io.cisa.taxiiserver.repository")
 @Import(value = MongoAutoConfiguration.class)
 @EnableMongoAuditing(auditorAwareRef = "springSecurityAuditorAware")
 public class DatabaseConfiguration {
@@ -58,7 +60,7 @@ public class DatabaseConfiguration {
         mongobee.setDbName(mongoProperties.getDatabase());
         mongobee.setMongoTemplate(mongoTemplate);
         // package to scan for migrations
-        mongobee.setChangeLogsScanPackage("com.thalesgroup.config.dbmigrations");
+        mongobee.setChangeLogsScanPackage("io.cisa.taxiiserver.dbmigrations");
         mongobee.setEnabled(true);
         return mongobee;
     }
