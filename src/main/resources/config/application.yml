@@ -38,6 +38,10 @@ spring:
             enabled: false
     thymeleaf:
         mode: XHTML
+    http:
+      multipart:
+        max-file-size: 20MB   
+        max-request-size: 50MB        
 
 security:
     basic:
@@ -47,10 +51,14 @@ server:
     session:
         cookie:
             http-only: true
+    tomcat:
+        basedir: ./tmp
+        max-http-post-size: 50000000
 
 info:
     project:
         version: #project.version#
+
 
 # ===================================================================
 # JHipster specific properties
@@ -64,13 +72,13 @@ jhipster:
         max-pool-size: 50
         queue-capacity: 10000
     # By default CORS is disabled. Uncomment to enable.
-    #cors:
-        #allowed-origins: "*"
-        #allowed-methods: GET, PUT, POST, DELETE, OPTIONS
-        #allowed-headers: "*"
-        #exposed-headers:
-        #allow-credentials: true
-        #max-age: 1800
+    cors:
+        allowed-origins: "*"
+        allowed-methods: GET, PUT, POST, DELETE, OPTIONS
+        allowed-headers: "*"
+        exposed-headers:
+        allow-credentials: true
+        max-age: 1800
     mail:
         from: JTaxiiServer@localhost
     swagger:
@@ -96,7 +104,8 @@ jhipster:
 # https://jhipster.github.io/common-application-properties/
 # ===================================================================
 
-application:
+#application:
+
 
           
           
