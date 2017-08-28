@@ -62,8 +62,8 @@ public class ApiRootResourceIntTest {
     private static final Set<Collection> DEFAULT_COLLECTIONS = new HashSet<>();
     private static final Set<Collection> UPDATED_COLLECTIONS = new HashSet<>();
 
-    private static final Long DEFAULT_MAX_CONTENT_LENGTH = 1L;
-    private static final Long UPDATED_MAX_CONTENT_LENGTH = 2L;
+    private static final int DEFAULT_MAX_CONTENT_LENGTH = 1;
+    private static final int UPDATED_MAX_CONTENT_LENGTH = 2;
 
     private static final ZonedDateTime DEFAULT_CREATED_DATE = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
     private static final ZonedDateTime UPDATED_CREATED_DATE = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
@@ -197,7 +197,7 @@ public class ApiRootResourceIntTest {
             .andExpect(jsonPath("$.[*].versions").value(hasItem(DEFAULT_VERSIONS.toString())))
             .andExpect(jsonPath("$.[*].channels").value(hasItem(DEFAULT_CHANNELS.toString())))
             .andExpect(jsonPath("$.[*].collections").value(hasItem(DEFAULT_COLLECTIONS.toString())))
-            .andExpect(jsonPath("$.[*].maxContentLength").value(hasItem(DEFAULT_MAX_CONTENT_LENGTH.intValue())))
+            .andExpect(jsonPath("$.[*].maxContentLength").value(hasItem(DEFAULT_MAX_CONTENT_LENGTH)))
             .andExpect(jsonPath("$.[*].createdDate").value(hasItem((DEFAULT_CREATED_DATE))))
             .andExpect(jsonPath("$.[*].lastModifiedDate").value(hasItem((DEFAULT_LAST_MODIFIED_DATE))));
     }
@@ -217,7 +217,7 @@ public class ApiRootResourceIntTest {
             .andExpect(jsonPath("$.versions").value(DEFAULT_VERSIONS.toString()))
             .andExpect(jsonPath("$.channels").value(DEFAULT_CHANNELS.toString()))
             .andExpect(jsonPath("$.collections").value(DEFAULT_COLLECTIONS.toString()))
-            .andExpect(jsonPath("$.maxContentLength").value(DEFAULT_MAX_CONTENT_LENGTH.intValue()))
+            .andExpect(jsonPath("$.maxContentLength").value(DEFAULT_MAX_CONTENT_LENGTH))
             .andExpect(jsonPath("$.createdDate").value((DEFAULT_CREATED_DATE)))
             .andExpect(jsonPath("$.lastModifiedDate").value((DEFAULT_LAST_MODIFIED_DATE)));
     }

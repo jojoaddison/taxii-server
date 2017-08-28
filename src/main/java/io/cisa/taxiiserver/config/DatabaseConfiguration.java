@@ -60,7 +60,7 @@ public class DatabaseConfiguration {
         mongobee.setDbName(mongoProperties.getDatabase());
         mongobee.setMongoTemplate(mongoTemplate);
         // package to scan for migrations
-        mongobee.setChangeLogsScanPackage("io.cisa.taxiiserver.dbmigrations");
+        mongobee.setChangeLogsScanPackage("io.cisa.taxiiserver.config.dbmigrations");
         mongobee.setEnabled(true);
         return mongobee;
     }

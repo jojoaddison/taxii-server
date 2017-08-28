@@ -1,4 +1,4 @@
-package io.cisa.taxiiserver.domain;
+package io.cisa.taxiiserver.domain.status;
 
 import java.io.Serializable;
 import java.time.Instant;
@@ -10,8 +10,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
-import io.cisa.taxiiserver.domain.types.StatusFailure;
-import io.cisa.taxiiserver.domain.types.StatusSuccess;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * A Status.
@@ -30,27 +29,33 @@ public class Status implements Serializable {
     private String status;
 
     @Field("request_url")
+    @JsonProperty("request_url")
     private String requestUrl;
 
     @Field("request_timestamp")
+    @JsonProperty("request_timestamp")
     private Instant requestTimestamp;
 
     @Field("total_objects")
+    @JsonProperty("total_objects")
     private Integer totalObjects;
 
     @Field("success_count")
+    @JsonProperty("success_count")
     private Integer successCount;
 
     @Field("successes")
     private Set<StatusSuccess> successes = new HashSet<>();
 
     @Field("failure_count")
+    @JsonProperty("failure_count")
     private Integer failureCount;
 
     @Field("failures")
     private Set<StatusFailure> failures = new HashSet<>();
 
     @Field("pending_count")
+    @JsonProperty("pending_count")
     private Integer pendingCount;
 
     @Field("pendings")
@@ -130,17 +135,10 @@ public class Status implements Serializable {
     }
 
     public Integer getSuccessCount() {
+    	successCount = successes.size();
         return successCount;
     }
 
-    public Status successCount(Integer successCount) {
-        this.successCount = successCount;
-        return this;
-    }
-
-    public void setSuccessCount(Integer successCount) {
-        this.successCount = successCount;
-    }
 
     public Set<StatusSuccess> getSuccesses() {
         return successes;

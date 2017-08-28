@@ -1,8 +1,14 @@
-package io.cisa.taxiiserver.domain.types;
+package io.cisa.taxiiserver.domain.status;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 public class StatusSuccess {
+	@Id
+	private String id;
 	
-	private String id, url;
+	@Field("url")
+	private String url;
 
 	public String getId() {
 		return id;
@@ -20,5 +26,5 @@ public class StatusSuccess {
 		this.url = url;
 	}
 	
-
+	
 }

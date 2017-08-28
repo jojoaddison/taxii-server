@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.codahale.metrics.annotation.Timed;
 
-import io.cisa.taxiiserver.domain.Status;
+import io.cisa.taxiiserver.domain.status.Status;
 import io.cisa.taxiiserver.repository.StatusRepository;
 import io.cisa.taxiiserver.web.rest.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

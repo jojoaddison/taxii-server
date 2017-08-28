@@ -30,9 +30,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import io.cisa.taxiiserver.JTaxiiServerApp;
-import io.cisa.taxiiserver.domain.Status;
-import io.cisa.taxiiserver.domain.types.StatusFailure;
-import io.cisa.taxiiserver.domain.types.StatusSuccess;
+import io.cisa.taxiiserver.domain.status.Status;
+import io.cisa.taxiiserver.domain.status.StatusFailure;
+import io.cisa.taxiiserver.domain.status.StatusSuccess;
 import io.cisa.taxiiserver.repository.StatusRepository;
 import io.cisa.taxiiserver.web.rest.errors.ExceptionTranslator;
 
@@ -117,7 +117,6 @@ public class StatusResourceIntTest {
             .requestUrl(DEFAULT_REQUEST_URL)
             .requestTimestamp(DEFAULT_REQUEST_TIMESTAMP)
             .totalObjects(DEFAULT_TOTAL_OBJECTS)
-            .successCount(DEFAULT_SUCCESS_COUNT)
             .successes(DEFAULT_SUCCESSES)
             .failureCount(DEFAULT_FAILURE_COUNT)
             .failures(DEFAULT_FAILURES)
@@ -244,7 +243,6 @@ public class StatusResourceIntTest {
             .requestUrl(UPDATED_REQUEST_URL)
             .requestTimestamp(UPDATED_REQUEST_TIMESTAMP)
             .totalObjects(UPDATED_TOTAL_OBJECTS)
-            .successCount(UPDATED_SUCCESS_COUNT)
             .successes(UPDATED_SUCCESSES)
             .failureCount(UPDATED_FAILURE_COUNT)
             .failures(UPDATED_FAILURES)

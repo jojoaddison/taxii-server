@@ -16,6 +16,10 @@ public final class Constants {
     
     public static final String ACCEPT_STIX_HEADER="application/vnd.oasis.stix+json; version=2.0";
     public static final String CONTENT_TYPE_STIX_HEADER="Content-Type=application/vnd.oasis.stix+json; version=2.0";
+
+	public static final String SPEC_VERSION = "2.0";
+
+	public static final String BUNDLE_TYPE = "bundle";
     
     
     private Constants() {

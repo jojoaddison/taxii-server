@@ -9,6 +9,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * A Collection.
  */
@@ -20,31 +22,38 @@ public class Collection implements Serializable {
     private String id;
 
     @Field("url")
+    @JsonProperty("url")
     private String url;
 
     @Field("display_name")
+    @JsonProperty("display_name")
     private String displayName;
 
     @Field("description")
     private String description;
 
     @Field("can_read")
+    @JsonProperty("can_read")
     private Boolean canRead;
 
     @Field("can_write")
+    @JsonProperty("can_write")
     private Boolean canWrite;
 
     @Field("media_types")
+    @JsonProperty("media_types")
     private Set<String> mediaTypes = new HashSet<>();
 
-    @Field("objects_count")
-    private Integer objectsCount;
-    
     @Field("manifest")
     private Set<Manifest> manifest = new HashSet<>();
     
     @Field("objects")
     private Set<Object> objects = new HashSet<>();
+
+    @Field("objects_count")
+    @JsonProperty("objects_count")
+    private int objectsCount = getObjects().size();
+    
 
     public String getId() {
         return id;
@@ -132,18 +141,11 @@ public class Collection implements Serializable {
         this.mediaTypes = mediaTypes;
     }
 
-    public Integer getObjectsCount() {
+    public int getObjectsCount() {
+    	objectsCount = getObjects().size();
         return objectsCount;
     }
 
-    public Collection objectsCount(Integer objectsCount) {
-        this.objectsCount = objectsCount;
-        return this;
-    }
-
-    public void setObjectsCount(Integer objectsCount) {
-        this.objectsCount = objectsCount;
-    }
 
     public Set<Manifest> getManifest() {
 		return manifest;

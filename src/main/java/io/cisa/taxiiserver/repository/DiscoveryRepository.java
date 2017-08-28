@@ -8,7 +8,6 @@ import io.cisa.taxiiserver.domain.Discovery;
 /**
  * Spring Data MongoDB repository for the Discovery entity.
  */
-@SuppressWarnings("unused")
 @Repository
 public interface DiscoveryRepository extends MongoRepository<Discovery,String> {
 

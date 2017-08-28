@@ -3,7 +3,7 @@ package io.cisa.taxiiserver.domain;
 import java.util.HashSet;
 import java.util.Set;
 
-import io.cisa.taxiiserver.domain.types.Client;
+import io.cisa.taxiiserver.domain.stix.common.Client;
 import io.cisa.taxiiserver.domain.types.Message;
 
 public class Channel {

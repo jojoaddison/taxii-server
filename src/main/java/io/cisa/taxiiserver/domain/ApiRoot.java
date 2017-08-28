@@ -12,6 +12,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * A ApiRoot.
  */
@@ -23,10 +25,14 @@ public class ApiRoot implements Serializable {
     private String id;
 
     @Field("display_name")
+    @JsonProperty("display_name")
     private String displayName;
 
     @Field("description")
     private String description;
+
+    @Field("url")
+    private String url;    
 
     @NotNull
     @Field("versions")
@@ -39,12 +45,15 @@ public class ApiRoot implements Serializable {
     private Set<Collection> collections = new HashSet<>();
 
     @Field("max_content_length")
+    @JsonProperty("max_content_length")
     private int maxContentLength;
 
     @Field("created_date")
+    @JsonProperty("created_date")
     private ZonedDateTime createdDate;
 
     @Field("last_modified_date")
+    @JsonProperty("last_modified_date")
     private ZonedDateTime lastModifiedDate;
 
     public String getId() {
@@ -55,7 +64,15 @@ public class ApiRoot implements Serializable {
         this.id = id;
     }
 
-    public String getDisplayName() {
+    public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	public String getDisplayName() {
         return displayName;
     }
 

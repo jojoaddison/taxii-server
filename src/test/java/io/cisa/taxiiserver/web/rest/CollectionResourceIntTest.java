@@ -10,7 +10,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -54,8 +56,8 @@ public class CollectionResourceIntTest {
     private static final Boolean DEFAULT_CAN_WRITE = false;
     private static final Boolean UPDATED_CAN_WRITE = true;
 
-    private static final String DEFAULT_MEDIA_TYPES = "AAAAAAAAAA";
-    private static final String UPDATED_MEDIA_TYPES = "BBBBBBBBBB";
+    private static final Set<String> DEFAULT_MEDIA_TYPES = new HashSet<>();
+    private static final Set<String> UPDATED_MEDIA_TYPES = new HashSet<>();
 
     private static final Integer DEFAULT_OBJECTS_COUNT = 1;
     private static final Integer UPDATED_OBJECTS_COUNT = 2;
@@ -93,14 +95,14 @@ public class CollectionResourceIntTest {
      * if they test an entity which requires the current entity.
      */
     public static Collection createEntity() {
+    	DEFAULT_MEDIA_TYPES.add("AAAAAAAAAA");
         Collection collection = new Collection()
             .url(DEFAULT_URL)
             .displayName(DEFAULT_DISPLAY_NAME)
             .description(DEFAULT_DESCRIPTION)
             .canRead(DEFAULT_CAN_READ)
             .canWrite(DEFAULT_CAN_WRITE)
-            .mediaTypes(DEFAULT_MEDIA_TYPES)
-            .objectsCount(DEFAULT_OBJECTS_COUNT);
+            .mediaTypes(DEFAULT_MEDIA_TYPES);
         return collection;
     }
 
@@ -201,6 +203,7 @@ public class CollectionResourceIntTest {
         // Initialize the database
         collectionRepository.save(collection);
         int databaseSizeBeforeUpdate = collectionRepository.findAll().size();
+        UPDATED_MEDIA_TYPES.add("BBBBBBBBB");
 
         // Update the collection
         Collection updatedCollection = collectionRepository.findOne(collection.getId());
@@ -210,8 +213,7 @@ public class CollectionResourceIntTest {
             .description(UPDATED_DESCRIPTION)
             .canRead(UPDATED_CAN_READ)
             .canWrite(UPDATED_CAN_WRITE)
-            .mediaTypes(UPDATED_MEDIA_TYPES)
-            .objectsCount(UPDATED_OBJECTS_COUNT);
+            .mediaTypes(UPDATED_MEDIA_TYPES);
 
         restCollectionMockMvc.perform(put("/api/collections")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)

@@ -10,5 +10,7 @@ import io.cisa.taxiiserver.domain.ApiRoot;
  */
 @Repository
 public interface ApiRootRepository extends MongoRepository<ApiRoot,String> {
+
+	ApiRoot findByUrl(String apiRoot);
     
 }

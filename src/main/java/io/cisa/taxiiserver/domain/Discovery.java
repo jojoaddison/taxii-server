@@ -12,6 +12,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * A Discovery.
  */
@@ -24,6 +26,7 @@ public class Discovery implements Serializable {
 
     @NotNull
     @Field("display_name")
+    @JsonProperty("display_name")
     private String displayName;
 
     @Field("description")
@@ -33,15 +36,19 @@ public class Discovery implements Serializable {
     private String contact;
 
     @Field("default")
+    @JsonProperty("default")
     private String defaultURL;
 
     @Field("api_roots")
+    @JsonProperty("api_roots")
     private Set<String> apiRoots = new HashSet<>();
 
     @Field("last_modified")
+    @JsonProperty("last_modified")
     private ZonedDateTime lastModified;
 
     @Field("created_date")
+    @JsonProperty("created_date")
     private ZonedDateTime createdDate;
 
     public String getId() {

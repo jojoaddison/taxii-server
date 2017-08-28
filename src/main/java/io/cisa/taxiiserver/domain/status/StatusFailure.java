@@ -1,7 +1,14 @@
-package io.cisa.taxiiserver.domain.types;
+package io.cisa.taxiiserver.domain.status;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 public class StatusFailure {
-	private String id, message;
+	@Id
+	private String id;
+	
+	@Field("message")
+	private String message;
 
 	public String getId() {
 		return id;
@@ -18,4 +25,6 @@ public class StatusFailure {
 	public void setMessage(String message) {
 		this.message = message;
 	}
+	
+	
 }

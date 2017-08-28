@@ -18,7 +18,13 @@ import org.springframework.data.mongodb.core.mapping.Field;
 @Document(collection = "jhi_persistent_audit_event")
 public class PersistentAuditEvent implements Serializable {
 
-    @Id
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8903389975267205422L;
+
+	@Id
     @Field("event_id")
     private String id;
 
