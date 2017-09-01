@@ -12,6 +12,11 @@ import io.cisa.taxiiserver.domain.stix.StixObject;
 
 public class IntrusionSet extends StixObject{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4647630051959364601L;
+
 	@Field("name")
 	private String name;
 	

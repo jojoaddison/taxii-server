@@ -9,6 +9,11 @@ import io.cisa.taxiiserver.domain.stix.common.CommonProperties;
 @Document(collection="objects")
 public class StixObject extends CommonProperties{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5383082743486041171L;
+
 	@Id
 	private String id;
 	

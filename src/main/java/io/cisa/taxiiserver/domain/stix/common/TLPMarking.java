@@ -1,14 +1,14 @@
 package io.cisa.taxiiserver.domain.stix.common;
 
+import java.io.Serializable;
+import java.time.ZonedDateTime;
+import java.util.Objects;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import java.io.Serializable;
-import java.time.ZonedDateTime;
-import java.util.Objects;
 
 /**
  * A TLPMarking.

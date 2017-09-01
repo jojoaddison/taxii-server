@@ -10,6 +10,11 @@ import io.cisa.taxiiserver.domain.stix.StixObject;
 import io.cisa.taxiiserver.domain.stix.common.KillChainPhase;
 
 public class Tool extends StixObject{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1210258751545778141L;
+
 	@Field("name")
 	private String name;
 	

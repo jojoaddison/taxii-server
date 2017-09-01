@@ -12,6 +12,11 @@ import io.cisa.taxiiserver.domain.stix.StixObject;
 
 public class Campaign extends StixObject{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3567272571923422964L;
+
 	@Field("name")
 	private String name;
 	

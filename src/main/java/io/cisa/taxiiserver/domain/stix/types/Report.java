@@ -11,6 +11,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.cisa.taxiiserver.domain.stix.StixObject;
 
 public class Report extends StixObject{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2705840761748034888L;
+
 	@Field("name")
 	private String name;
 	

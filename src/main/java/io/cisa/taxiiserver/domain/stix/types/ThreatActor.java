@@ -10,6 +10,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.cisa.taxiiserver.domain.stix.StixObject;
 
 public class ThreatActor extends StixObject{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1604793873853205314L;
+
 	@Field("name")
 	private String name;
 	

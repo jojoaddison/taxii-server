@@ -1,5 +1,6 @@
 package io.cisa.taxiiserver.domain.stix.common;
 
+import java.io.Serializable;
 import java.time.ZonedDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -8,8 +9,13 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public abstract class CommonProperties {
+public abstract class CommonProperties implements Serializable{
 		
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -241934917313041150L;
+
 	@Field("created_by_ref")
 	@JsonProperty("created_by_ref")
 	private String createdByRef;

@@ -11,6 +11,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.cisa.taxiiserver.domain.stix.StixObject;
 
 public class ObservedData extends StixObject{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8902498786898920481L;
+
 	@Field("first_observed")
 	@JsonProperty("first_observed")
 	private ZonedDateTime firstObserved;

@@ -12,6 +12,11 @@ import io.cisa.taxiiserver.domain.stix.StixObject;
 import io.cisa.taxiiserver.domain.stix.common.KillChainPhase;
 
 public class Indicator extends StixObject{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5419218763156942197L;
+
 	@Field("name")
 	private String name;
 	

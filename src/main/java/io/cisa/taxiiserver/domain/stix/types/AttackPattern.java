@@ -12,6 +12,11 @@ import io.cisa.taxiiserver.domain.stix.common.KillChainPhase;
 
 public class AttackPattern extends StixObject{
 		
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5378806958391312749L;
+
 	@Field("name")
 	private String name;
 	

@@ -12,6 +12,11 @@ import io.cisa.taxiiserver.domain.stix.StixObject;
 
 public class Sighting extends StixObject {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 9029135991966520348L;
+
 	@Field("first_seen")
 	@JsonProperty("first_seen")
 	private ZonedDateTime firstSeen;

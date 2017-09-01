@@ -1,14 +1,15 @@
 package io.cisa.taxiiserver.domain.stix.common;
 
+import java.io.Serializable;
+import java.util.Objects;
+
+import javax.validation.constraints.NotNull;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import javax.validation.constraints.*;
-import java.io.Serializable;
-import java.util.Objects;
 
 /**
  * A GranularMarkingType.

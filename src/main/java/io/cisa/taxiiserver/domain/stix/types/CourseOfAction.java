@@ -5,6 +5,11 @@ import org.springframework.data.mongodb.core.mapping.Field;
 import io.cisa.taxiiserver.domain.stix.StixObject;
 
 public class CourseOfAction extends StixObject{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3853362027878920867L;
+
 	@Field("name")
 	private String name;
 	

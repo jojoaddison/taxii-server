@@ -7,6 +7,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.cisa.taxiiserver.domain.stix.StixObject;
 
 public class Relationship extends StixObject{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7673611325088916305L;
+
 	@Field("relationship_type")
 	@JsonProperty("relationship_type")
 	private String relationshipType;
