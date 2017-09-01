@@ -6,14 +6,18 @@ import java.util.Set;
 
 import org.springframework.data.mongodb.core.mapping.Field;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+=======
+>>>>>>> 759fb197725503daf5a2192ee305fc05a398da5d
 public class Manifest {
 	
 	@Field("url")
 	private String url;
 	
 	@Field("versions")
+<<<<<<< HEAD
 	private Set<Integer> versions = new HashSet<>();
 	
 	@Field("date_added")
@@ -28,6 +32,15 @@ public class Manifest {
 	@JsonProperty("media_types")
 	private Set<String> mediaTypes = new HashSet<>();
 	
+=======
+	private Set<String> versions = new HashSet<>();
+	
+	@Field("date_added")
+	private ZonedDateTime dateAdded;
+	
+	@Field("media_types")
+	private Set<String> mediaTypes = new HashSet<>();
+>>>>>>> 759fb197725503daf5a2192ee305fc05a398da5d
 
 	public String getUrl() {
 		return url;
@@ -42,6 +55,7 @@ public class Manifest {
 		return this;
 	}
 
+<<<<<<< HEAD
 	public Set<Integer> getVersions() {
 		return versions;
 	}
@@ -51,6 +65,17 @@ public class Manifest {
 	}	
 
 	public Manifest versions(Set<Integer> versions) {
+=======
+	public Set<String> getVersions() {
+		return versions;
+	}
+
+	public void setVersions(Set<String> versions) {
+		this.versions = versions;
+	}	
+
+	public Manifest versions(Set<String> versions) {
+>>>>>>> 759fb197725503daf5a2192ee305fc05a398da5d
 		this.versions = versions;
 		return this;
 	}
@@ -68,6 +93,7 @@ public class Manifest {
 		return this;
 	}
 
+<<<<<<< HEAD
 	public ZonedDateTime getLastModified() {
 		return lastModified;
 	}
@@ -76,6 +102,8 @@ public class Manifest {
 		this.lastModified = lastModified;
 	}
 
+=======
+>>>>>>> 759fb197725503daf5a2192ee305fc05a398da5d
 	public Set<String> getMediaTypes() {
 		return mediaTypes;
 	}

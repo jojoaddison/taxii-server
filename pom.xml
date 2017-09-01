@@ -330,6 +330,7 @@
 			<artifactId>spring-security-data</artifactId>
 		</dependency>
 		<!-- jhipster-needle-maven-add-dependency -->
+<<<<<<< HEAD
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-activemq</artifactId>
@@ -342,6 +343,8 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 		</dependency>
+=======
+>>>>>>> 759fb197725503daf5a2192ee305fc05a398da5d
 	</dependencies>
 	<build>
 		<defaultGoal>spring-boot:run</defaultGoal>
